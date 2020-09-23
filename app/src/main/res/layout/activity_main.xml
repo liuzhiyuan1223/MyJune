@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnToActLifeCyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:text="ToActLifeCyle"/>
+
+    <Button
+        android:id="@+id/btnToJavaLangTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:text="ToJavaLangTest"/>
+
+    <Button
+        android:id="@+id/btnToFloatView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:text="ToJavaLangTest"/>
+
+    <Button
+        android:id="@+id/btnToJavaParse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:text="ToJavaParse"/>
+
+    <!-- 添加依赖 implementation 'androidx.recyclerview:recyclerview:1.1.0'-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/viewConRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
