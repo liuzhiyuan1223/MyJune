@@ -9,14 +9,14 @@ import com.june.R
 
 private const val TAG = "MyRecyclerAdapter"
 
-class MyRecyclerAdapter(context : Context) : RecyclerView.Adapter<MyViewHolder>() {
+class MyRecyclerAdapter(context: Context) : RecyclerView.Adapter<MyViewHolder>() {
 
     val mContext = context
-    val dataList : MutableList<DataModel> = mutableListOf()
-
+    val dataList: MutableList<DataModel> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val rootView = LayoutInflater.from(mContext).inflate(R.layout.layout_recyclerview_item, parent, false)
+        val rootView =
+            LayoutInflater.from(mContext).inflate(R.layout.layout_recyclerview_item, parent, false)
         return MyViewHolder(rootView)
     }
 
@@ -28,12 +28,12 @@ class MyRecyclerAdapter(context : Context) : RecyclerView.Adapter<MyViewHolder>(
         val dataModel = dataList[position]
         holder.itemTv.setText(dataModel.name)
         holder.itemTv.setOnClickListener {
-            dataModel.clickEvent
+            dataModel.clickCallBack?.onClick()
         }
     }
 
     //暂时不使用
-    fun updateView(dataModel: DataModel){
+    fun updateView(dataModel: DataModel) {
         dataList.add(dataModel)
         notifyDataSetChanged()
     }
