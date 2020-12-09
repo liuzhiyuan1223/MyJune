@@ -1,19 +1,30 @@
 package com.june
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.june.component_floatview.FloatViewActivity
-import com.june.component_navigation.NavigActivity
-import com.june.component_recyclerview.DataModel
-import com.june.component_recyclerview.InterfaceClickCallback
-import com.june.component_recyclerview.MyRecyclerAdapter
+import com.june.compo_floatview.FloatViewActivity
+import com.june.comp_navigation.NavigActivity
+import com.june.compo_recyclerview.DataModel
+import com.june.compo_recyclerview.InterfaceClickCallback
+import com.june.compo_recyclerview.MyRecyclerAdapter
 import com.june.frame_lifecycle.LifeCycleActivity
+import com.june.frame_okhttp.NetUtilActivity
 import com.june.language_java.JavaLangActivity
+import com.june.other_utils.LogCharlesRangIp
+import com.june.permission.CarmeraPermissonActivity
 import com.june.process_thread.ThreadTestCl
+import com.june.understand_fragment.MyFragActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import com.june.comp_edittext.TestEditTextActivity
+import com.june.comp_scroll.MyElemeActivity
+import com.june.comp_scroll2.main.ScrollMainActivity
+import com.june.xml_parser.XMLParserActivity
+import com.june.comp_ui.UITestActivity
 
 private const val TAG = "july"
 
@@ -32,6 +43,13 @@ class MainActivity : AppCompatActivity() {
         ThreadTestCl.printMainThreadPriority();
     }
 
+
+    override fun onResume() {
+        super.onResume()
+        LogCharlesRangIp.logCharlesIp(this) //打印所有的ip地址
+    }
+    
+
     fun initRecycleViewContainer() {
         val layoutMan: LinearLayoutManager = LinearLayoutManager(mContext)
         layoutMan.orientation = LinearLayoutManager.VERTICAL
@@ -45,51 +63,35 @@ class MainActivity : AppCompatActivity() {
         viewConRecyclerView.adapter = myRecyclerAdapter
     }
 
+    val dataList: MutableList<DataModel> = mutableListOf()
+
     //添加数据
     fun initDataList(): MutableList<DataModel> {
-        val dataList: MutableList<DataModel> = mutableListOf()
-        //更新测试数据
-        val dataModel1 = DataModel()
-        dataModel1.name = "btnToActLifeCyle"
-        dataModel1.setClickCallback(object : InterfaceClickCallback {
-            override fun onClick() {
-                val intent = Intent(mContext, LifeCycleActivity::class.java)
-                startActivity(intent)
-            }
-        })
-
-        val dataModel2 = DataModel()
-        dataModel2.name = "btnToJavaLangTest"
-        dataModel2.setClickCallback(object : InterfaceClickCallback {
-            override fun onClick() {
-                val intent = Intent(mContext, JavaLangActivity::class.java)
-                startActivity(intent)
-            }
-        })
-
-        val dataModel3 = DataModel()
-        dataModel3.name = "btnToFloatView"
-        dataModel3.setClickCallback(object : InterfaceClickCallback {
-            override fun onClick() {
-                val intent = Intent(mContext, FloatViewActivity::class.java)
-                startActivity(intent)
-            }
-        })
-
-        val dataModel4 = DataModel()
-        dataModel4.name = "btnToNavigActivity"
-        dataModel4.setClickCallback(object : InterfaceClickCallback {
-            override fun onClick() {
-                val intent = Intent(mContext, NavigActivity::class.java)
-                startActivity(intent)
-            }
-        })
-
-        dataList.add(dataModel1)
-        dataList.add(dataModel2)
-        dataList.add(dataModel3)
-        dataList.add(dataModel4)
+        addItemToList("1-btnToActLifeCyle", LifeCycleActivity::class.java)
+        addItemToList("2-btnToJavaLangTest", JavaLangActivity::class.java)
+        addItemToList("3-btnToFloatView", FloatViewActivity::class.java)
+        addItemToList("4-btnToNavigActivity", NavigActivity::class.java)
+        addItemToList("5-btnToCarmeraPermissonActivity", CarmeraPermissonActivity::class.java)
+        addItemToList("6-btnToMyFragActivity", MyFragActivity::class.java)
+        addItemToList("7-btnToNetUtilActivity", NetUtilActivity::class.java) //构建自己的网络请求mock器
+        addItemToList("9-btnToTestEditTextActivity", TestEditTextActivity::class.java)
+        addItemToList("10-btnToXMLParserActivity", XMLParserActivity::class.java)
+        addItemToList("11-btnToUITestActivity", UITestActivity::class.java)
+        addItemToList("12-btnToMyElemeActivity", MyElemeActivity::class.java)
+        addItemToList("13-btnToScrollMainActivity", ScrollMainActivity::class.java)
 
         return dataList
+    }
+
+    private fun addItemToList(@NonNull nameOfDes : String,@NonNull cls : Class<out Activity>){ //注意这个泛型的使用<out XX>
+        val newDataModel = DataModel()
+        newDataModel.name = nameOfDes
+        newDataModel.setClickCallback(object : InterfaceClickCallback {
+            override fun onClick() {
+                val intent = Intent(mContext, cls)
+                startActivity(intent)
+            }
+        })
+        dataList.add(newDataModel)
     }
 }

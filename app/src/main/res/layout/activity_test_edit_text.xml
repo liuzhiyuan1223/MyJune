@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".comp_edittext.TestEditTextActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20_dp"
+        android:hint="测试信息"/>
+
+    <FrameLayout
+        android:id="@+id/fl_test"
+        android:layout_marginTop="@dimen/_20_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试TextVew1"
+            android:textSize="50sp"/>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试textview2"
+        android:layout_marginTop="@dimen/_20_dp"
+        android:textSize="50sp"/>
+
+</LinearLayout>

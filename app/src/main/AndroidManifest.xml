@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,12 +15,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".component_navigation.NavigActivity"></activity>
+        <activity android:name=".comp_ui.UITestActivity"></activity>
+        <activity android:name=".xml_parser.XMLParserActivity" />
+        <activity android:name=".comp_edittext.TestEditTextActivity" />
+        <activity android:name=".solve_input.PlanBInputActivity" />
+        <activity android:name=".solve_input.ChattingResolvedActivity" />
+        <activity android:name=".solve_input.ChattingResolvedFragmentActivity" />
+        <activity android:name=".solve_input.ChattingResolvedHandleByPlaceholderActivity" />
+        <activity android:name=".solve_input.ChattingUnresolvedActivity" />
+        <activity android:name=".solve_input.TranslucentActivity" />
+        <activity android:name=".solve_input.InputMainActivity" />
+        <activity android:name=".solve_input_bottom.ChattingResolvedHandleByPlaceholderActivity" />
+        <activity android:name=".solve_input_bottom.ChattingUnresolvedActivity" />
+        <activity android:name=".solve_input_bottom.TranslucentActivity" />
+        <activity android:name=".solve_input_bottom.InputViewHeightActivity" />
+        <activity android:name=".frame_okhttp.NetUtilActivity" />
+        <activity android:name=".responsive_ui.ResponsiveActivity" />
+        <activity android:name=".anno_framework.AnnoTestActivity" />
+        <activity android:name=".understand_fragment.MyFragActivity" />
+        <activity android:name=".permission.CarmeraPermissonActivity" />
+        <activity android:name=".comp_navigation.NavigActivity" />
         <activity android:name=".project_javaparser.JavaParserActivity" />
         <activity android:name=".language_kotlin.KotTestActivity" />
-        <activity android:name=".component_floatview.FloatViewActivity" />
+        <activity android:name=".compo_floatview.FloatViewActivity" />
         <activity android:name=".language_java.JavaLangActivity" />
         <activity android:name=".frame_lifecycle.LifeCycleActivity" />
+        <activity android:name="com.june.comp_scroll.MyElemeActivity" />
+        <activity android:name="com.june.comp_scroll2.main.ScrollMainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
