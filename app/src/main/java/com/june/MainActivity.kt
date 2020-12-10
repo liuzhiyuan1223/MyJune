@@ -85,8 +85,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun addItemToList(@NonNull nameOfDes : String,@NonNull cls : Class<out Activity>){ //注意这个泛型的使用<out XX>
         val newDataModel = DataModel()
-        newDataModel.name = nameOfDes
-        newDataModel.setClickCallback(object : InterfaceClickCallback {
+        newDataModel.name = nameOfDes //用于recyclerview展示item的title
+        newDataModel.setClickCallback(object : InterfaceClickCallback { //用于recyclerview的item点击事件处理
             override fun onClick() {
                 val intent = Intent(mContext, cls)
                 startActivity(intent)
