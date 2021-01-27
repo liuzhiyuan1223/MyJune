@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_e9e9e9"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/_15_dp"
+    android:paddingRight="@dimen/_15_dp">
+
+    <TextView
+        android:id="@+id/mCancelTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_20_dp"
+        android:textSize="@dimen/_20sp"
+        android:textStyle="bold"
+        tools:text="下一单乘客取消了666订单" />
+
+    <TextView
+        android:id="@+id/mCancelContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10_dp"
+        android:textSize="@dimen/_16sp"
+        tools:text="行程已更新，请继续前往当前上车地点接乘客666行程已更新，请继续前往当前上车地点接666乘客" />
+
+    <!-- 这是一条线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0_5_dp"
+        android:layout_marginTop="@dimen/_20_dp"
+        android:background="@color/color_333333" />
+
+    <TextView
+        android:id="@+id/mConfirmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/_12_5_dp"
+        android:paddingBottom="@dimen/_12_5_dp"
+        android:textSize="@dimen/_18sp"
+        android:textStyle="bold"
+        tools:text="我知道了(666s)" />
+
+</LinearLayout>

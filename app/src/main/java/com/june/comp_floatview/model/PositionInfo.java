@@ -1,4 +1,4 @@
-package com.june.compo_floatview.model;
+package com.june.comp_floatview.model;
 
 public class PositionInfo {
 

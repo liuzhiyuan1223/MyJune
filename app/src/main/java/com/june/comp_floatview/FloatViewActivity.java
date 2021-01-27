@@ -1,15 +1,16 @@
-package com.june.compo_floatview;
+package com.june.comp_floatview;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 import com.june.R;
 import com.june.common_util.WindowUtil;
-import com.june.compo_floatview.model.PositionInfo;
-import com.june.compo_floatview.view.FloatCircleView;
+import com.june.comp_floatview.model.PositionInfo;
+import com.june.comp_floatview.view.FloatCircleView;
 
 public class FloatViewActivity extends AppCompatActivity {
 
@@ -30,6 +31,15 @@ public class FloatViewActivity extends AppCompatActivity {
         mWindowManager = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
         mLayoutParam = new WindowManager.LayoutParams();
         mView = new FloatCircleView(this);
+
+        mView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Log.d("july", "onClick: ");
+            }
+        });
+
+
         mView.addCallBack(new IUpdateFloatViewCallback() {
             @Override
             public void update(PositionInfo positionInfo) {

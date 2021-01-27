@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".lang_java.JavaLangActivity">
+    tools:context=".comp_fragment.MyFragAvtivitySecond">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

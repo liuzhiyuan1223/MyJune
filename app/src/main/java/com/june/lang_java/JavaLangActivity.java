@@ -1,4 +1,4 @@
-package com.june.language_java;
+package com.june.lang_java;
 
 import androidx.appcompat.app.AppCompatActivity;
 

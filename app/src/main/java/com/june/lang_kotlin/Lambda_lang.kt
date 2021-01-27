@@ -1,4 +1,4 @@
-package com.june.language_kotlin
+package com.june.lang_kotlin
 
 class Lambda_lang {
 

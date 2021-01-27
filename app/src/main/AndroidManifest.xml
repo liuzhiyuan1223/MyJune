@@ -15,7 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".comp_ui.UITestActivity"></activity>
+        <activity android:name=".comp_pack_name.PrintPackNameActivity" />
+        <activity android:name=".comp_counttimer_card.CancelCardTimerActivity" />
+        <activity android:name=".comp_text.TextTestActivity" />
+        <activity android:name=".comp_fragment.MyFragAvtivitySecond" />
+        <activity android:name=".comp_fragment.MyFragAvtivityFirst" />
+        <activity android:name=".comp_ui.UITestActivity" />
         <activity android:name=".xml_parser.XMLParserActivity" />
         <activity android:name=".comp_edittext.TestEditTextActivity" />
         <activity android:name=".solve_input.PlanBInputActivity" />
@@ -36,12 +41,19 @@
         <activity android:name=".permission.CarmeraPermissonActivity" />
         <activity android:name=".comp_navigation.NavigActivity" />
         <activity android:name=".project_javaparser.JavaParserActivity" />
-        <activity android:name=".language_kotlin.KotTestActivity" />
-        <activity android:name=".compo_floatview.FloatViewActivity" />
-        <activity android:name=".language_java.JavaLangActivity" />
+        <activity android:name=".lang_kotlin.KotTestActivity" />
+        <activity android:name=".comp_floatview.FloatViewActivity" />
+        <activity android:name=".lang_java.JavaLangActivity" />
         <activity android:name=".frame_lifecycle.LifeCycleActivity" />
-        <activity android:name="com.june.comp_scroll.MyElemeActivity" />
-        <activity android:name="com.june.comp_scroll2.main.ScrollMainActivity" />
+        <activity android:name=".comp_scroll.MyElemeActivity" />
+        <activity android:name=".comp_scroll2.main.ScrollMainActivity" /> <!-- <activity -->
+        <!-- android:name="com.june.comp_qr_code.activity.CaptureActivity" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@android:style/Theme.Black.NoTitleBar" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.june.comp_qr_code.activity.ResultActivity" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@android:style/Theme.Black.NoTitleBar" /> -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

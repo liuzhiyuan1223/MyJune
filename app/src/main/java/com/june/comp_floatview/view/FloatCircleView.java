@@ -1,4 +1,4 @@
-package com.june.compo_floatview.view;
+package com.june.comp_floatview.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -9,8 +9,8 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import com.june.R;
 import com.june.common_util.WindowUtil;
-import com.june.compo_floatview.IUpdateFloatViewCallback;
-import com.june.compo_floatview.model.PositionInfo;
+import com.june.comp_floatview.IUpdateFloatViewCallback;
+import com.june.comp_floatview.model.PositionInfo;
 
 public class FloatCircleView extends LinearLayout {
     private IUpdateFloatViewCallback mUpdateCallback;

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mTTTTTT"
+        android:background="@color/default_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20_dp"
+        android:gravity="center"
+        android:padding="@dimen/_10_dp"
+        android:text="开始"
+        android:textSize="@dimen/_16sp"
+        android:textStyle="bold" />
+
+    <com.june.comp_counttimer_card.PsgCancelRemindCard
+        android:id="@+id/mCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20_dp" />
+</LinearLayout>

@@ -22,4 +22,10 @@
     <string name="ignore_recommend_panel_height_cb_text">忽略保证面板高度等于键盘高度</string>
     <string name="mark_panel1_to_img">照片-面板1</string>
     <string name="several_sub_panels_cb_text">一页中有几个子面板</string>
+
+    <string name="format_txt_1">经过%d秒后再尝试%d次</string>
+    <string name="format_txt_2">这里放置一句动态配置的话:%s</string>
+
+
+    <string name="i_known_psg_cancel">我知道了(%ds)</string>
 </resources>

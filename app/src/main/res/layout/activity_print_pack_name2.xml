@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/tv_appName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="手机所有软件的包名列表"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <SearchView
+        android:layout_margin="@dimen/_10_dp"
+        android:id="@+id/mSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30_dp"
+        android:iconifiedByDefault="false"
+        android:inputType="textFilter"
+        android:queryHint="输入应用名搜索包名" />
+
+    <ListView
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/mPackNameList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

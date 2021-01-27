@@ -1,6 +1,6 @@
-package com.june.compo_floatview;
+package com.june.comp_floatview;
 
-import com.june.compo_floatview.model.PositionInfo;
+import com.june.comp_floatview.model.PositionInfo;
 
 public interface IUpdateFloatViewCallback {
 
