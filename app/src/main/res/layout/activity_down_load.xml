@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".comp_download.DownLoadActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_10_dp"
+        android:text="文件下载"
+        android:textSize="@dimen/_20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/mEditTextUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20_dp"
+        android:hint="输入链接地址" />
+
+    <TextView
+        android:id="@+id/mTvStartDownLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20_dp"
+        android:background="@color/line_color"
+        android:gravity="center"
+        android:padding="@dimen/_10_dp"
+        android:text="开始下载"
+        android:textSize="@dimen/_16sp" />
+</LinearLayout>

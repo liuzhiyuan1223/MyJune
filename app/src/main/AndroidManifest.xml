@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.june">
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -9,12 +10,15 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name="com.june.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="Instantiatable">
+        <activity android:name=".comp_download.DownLoadActivity"></activity>
         <activity android:name=".comp_pack_name.PrintPackNameActivity" />
         <activity android:name=".comp_counttimer_card.CancelCardTimerActivity" />
         <activity android:name=".comp_text.TextTestActivity" />
@@ -23,37 +27,16 @@
         <activity android:name=".comp_ui.UITestActivity" />
         <activity android:name=".xml_parser.XMLParserActivity" />
         <activity android:name=".comp_edittext.TestEditTextActivity" />
-        <activity android:name=".solve_input.PlanBInputActivity" />
-        <activity android:name=".solve_input.ChattingResolvedActivity" />
-        <activity android:name=".solve_input.ChattingResolvedFragmentActivity" />
-        <activity android:name=".solve_input.ChattingResolvedHandleByPlaceholderActivity" />
-        <activity android:name=".solve_input.ChattingUnresolvedActivity" />
-        <activity android:name=".solve_input.TranslucentActivity" />
-        <activity android:name=".solve_input.InputMainActivity" />
-        <activity android:name=".solve_input_bottom.ChattingResolvedHandleByPlaceholderActivity" />
-        <activity android:name=".solve_input_bottom.ChattingUnresolvedActivity" />
-        <activity android:name=".solve_input_bottom.TranslucentActivity" />
-        <activity android:name=".solve_input_bottom.InputViewHeightActivity" />
         <activity android:name=".frame_okhttp.NetUtilActivity" />
-        <activity android:name=".responsive_ui.ResponsiveActivity" />
-        <activity android:name=".anno_framework.AnnoTestActivity" />
         <activity android:name=".understand_fragment.MyFragActivity" />
         <activity android:name=".permission.CarmeraPermissonActivity" />
         <activity android:name=".comp_navigation.NavigActivity" />
-        <activity android:name=".project_javaparser.JavaParserActivity" />
         <activity android:name=".lang_kotlin.KotTestActivity" />
         <activity android:name=".comp_floatview.FloatViewActivity" />
         <activity android:name=".lang_java.JavaLangActivity" />
         <activity android:name=".frame_lifecycle.LifeCycleActivity" />
         <activity android:name=".comp_scroll.MyElemeActivity" />
         <activity android:name=".comp_scroll2.main.ScrollMainActivity" /> <!-- <activity -->
-        <!-- android:name="com.june.comp_qr_code.activity.CaptureActivity" -->
-        <!-- android:screenOrientation="portrait" -->
-        <!-- android:theme="@android:style/Theme.Black.NoTitleBar" /> -->
-        <!-- <activity -->
-        <!-- android:name="com.june.comp_qr_code.activity.ResultActivity" -->
-        <!-- android:screenOrientation="portrait" -->
-        <!-- android:theme="@android:style/Theme.Black.NoTitleBar" /> -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

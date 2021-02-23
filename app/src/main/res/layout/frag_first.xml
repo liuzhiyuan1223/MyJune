@@ -17,4 +17,15 @@
         android:textStyle="bold"
         android:text="启动secondActivity"/>
 
+
+    <TextView
+        android:id="@+id/mTvTest2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20_dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mTvStartSecondAct"
+        android:text="测试kotlin-android-extensions插件和生命周期关系"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

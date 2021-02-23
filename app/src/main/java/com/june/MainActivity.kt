@@ -8,6 +8,7 @@ import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.june.comp_counttimer_card.CancelCardTimerActivity
+import com.june.comp_download.DownLoadActivity
 import com.june.comp_floatview.FloatViewActivity
 import com.june.comp_navigation.NavigActivity
 import com.june.compo_recyclerview.DataModel
@@ -32,8 +33,6 @@ import com.june.xml_parser.XMLParserActivity
 import com.june.comp_ui.UITestActivity
 import com.june.lang_kotlin.KotTestActivity
 
-private const val TAG = "july"
-
 class MainActivity : AppCompatActivity() {
 
     val mContext: Context = this
@@ -47,12 +46,12 @@ class MainActivity : AppCompatActivity() {
         initRecycleViewContainer()
 
         //查看一下主线程的优先级
-        ThreadTestCl.printMainThreadPriority();
+//        ThreadTestCl.printMainThreadPriority();
     }
 
     override fun onResume() {
         super.onResume()
-        LogCharlesRangIp.logCharlesIp(this) //打印所有的ip地址
+//        LogCharlesRangIp.logCharlesIp(this) //打印所有的ip地址
     }
 
     fun initRecycleViewContainer() {
@@ -69,6 +68,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     //添加数据
+    /**
+     * 反编译出来的Java代码
+     */
     fun initDataList(): MutableList<DataModel> {
         addItemToList("1-btnToActLifeCyle", LifeCycleActivity::class.java)
         addItemToList("2-btnToJavaLangTest", JavaLangActivity::class.java)
@@ -87,6 +89,7 @@ class MainActivity : AppCompatActivity() {
         addItemToList("16-btnToKotTestActivity", KotTestActivity::class.java)
         addItemToList("17-btnToCancelCardTimerActivity", CancelCardTimerActivity::class.java)
         addItemToList("18-btnToPrintPackNameActivity", PrintPackNameActivity::class.java)
+        addItemToList("19-btnToDownLoadActivity", DownLoadActivity::class.java)
 
         return dataList
     }
