@@ -6,8 +6,6 @@ import android.os.Build;
 import android.view.View;
 import android.view.WindowManager;
 
-import com.june.comp_floatview.float_permission.FloatActivity;
-
 class FloatPhone extends FloatView {
 
     private final Context mContext;
@@ -17,7 +15,7 @@ class FloatPhone extends FloatView {
     private View mView;
     private int mX, mY;
     private boolean isRemove = false;
-    private PermissionListener mPermissionListener;
+    private final PermissionListener mPermissionListener;
 
     FloatPhone(Context applicationContext, PermissionListener permissionListener) {
         mContext = applicationContext;
@@ -54,6 +52,36 @@ class FloatPhone extends FloatView {
     public void init() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
             req();
+        } else if (Miui.rom()) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                req();
+            } else {
+                mLayoutParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+                Miui.req(mContext, new PermissionListener() {
+                    @Override
+                    public void onSuccess() {
+                        mWindowManager.addView(mView, mLayoutParams);
+                        if (mPermissionListener != null) {
+                            mPermissionListener.onSuccess();
+                        }
+                    }
+
+                    @Override
+                    public void onFail() {
+                        if (mPermissionListener != null) {
+                            mPermissionListener.onFail();
+                        }
+                    }
+                });
+            }
+        } else {
+            try {
+                mLayoutParams.type = WindowManager.LayoutParams.TYPE_TOAST;
+                mWindowManager.addView(mView, mLayoutParams);
+            } catch (Exception e) {
+                mWindowManager.removeView(mView);
+                req();
+            }
         }
     }
 

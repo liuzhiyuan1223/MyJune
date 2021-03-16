@@ -10,7 +10,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 public class CouponView extends View {
-    private Paint mPaint;
+    private final Paint mPaint;
 
     public CouponView(Context context) {
         this(context,null);

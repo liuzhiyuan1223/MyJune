@@ -10,8 +10,8 @@ import com.june.R;
 import java.util.List;
 
 public class MyAdapter extends BaseAdapter {
-    private Context mContext;
-    private LayoutInflater mLayoutInflater;
+    private final Context mContext;
+    private final LayoutInflater mLayoutInflater;
     private List namelist;
 
     //MyAdapter的构造函数，一个Context类型的参数，也就是哪一个Activity
@@ -59,7 +59,7 @@ public class MyAdapter extends BaseAdapter {
             //生成一个ViewHolder的对象
             holder = new ViewHolder();
             //把layout_list_item对象转移过来，以便修改和赋值
-            holder.tvAppName = (TextView) convertView.findViewById(R.id.tv_appName);
+            holder.tvAppName = convertView.findViewById(R.id.tv_appName);
 
             //把这个holder传递进去
             convertView.setTag(holder);

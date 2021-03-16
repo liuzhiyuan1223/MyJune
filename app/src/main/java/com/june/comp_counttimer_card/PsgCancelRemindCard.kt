@@ -30,9 +30,9 @@ class PsgCancelRemindCard : LinearLayout, View.OnClickListener {
     fun showPsgCancelCard(data: PassengerCancelModel?) {
 
         data?:return
-        mCancelTitle.setText(data.subTitle)
-        mCancelContent.setText(data.content)
-        mConfirmBtn.setText(context.getString(R.string.i_known_psg_cancel, data.phoneExpired))
+        mCancelTitle.text = data.subTitle
+        mCancelContent.text = data.content
+        mConfirmBtn.text = context.getString(R.string.i_known_psg_cancel, data.phoneExpired)
         mConfirmBtn.setOnClickListener(this)
 
         val v = data.phoneExpired * 1000
@@ -64,7 +64,7 @@ class PsgCancelRemindCard : LinearLayout, View.OnClickListener {
             val vTest = millisUntilFinished / 1000
 
 //            mConfirmBtn.setText(context.getString(R.string.i_known_psg_cancel, millisUntilFinished.toInt()))
-            mConfirmBtn.setText(context.getString(R.string.i_known_psg_cancel, vTest))
+            mConfirmBtn.text = context.getString(R.string.i_known_psg_cancel, vTest)
         }
     }
 

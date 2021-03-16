@@ -3,11 +3,12 @@ buildscript {
     repositories {
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+
         google()
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.0.1"
+        classpath "com.android.tools.build:gradle:4.1.2"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -16,12 +17,41 @@ allprojects {
     repositories {
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
-        maven { url 'https://jitpack.io' }
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+
+
+task myInstallDebugApk {
+    doLast {
+        def path = rootDir.getAbsolutePath() + "/app/build/outputs/apk/debug"
+        def dir = new File(path)
+        def apkName = new String()
+        files(dir.listFiles()).each { file ->
+            if (file.name.contains("apk")) {
+                apkName = file.name
+                println "${file.name} is ready to be installed."
+            }
+        }
+        def apkPath = path + File.separator + apkName
+        def command = "adb install -r -d -t ${apkPath}"  //adb instal 命令
+        try {
+            exec { //调用 exec 方法执行这个命令
+            ExecSpec execSpec ->
+                //配置闭包的内容
+                executable 'bash'
+                args '-c', command
+            }
+            println "success! installApk install success"
+        } catch (Exception e) {
+            println "failed! installApk install failed"
+        }
+    }
 }

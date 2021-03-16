@@ -5,12 +5,8 @@
     <item type="id" name="webview" />
     <item type="id" name="scrollview" />
 
-    <item name="decode" type="id"/>
-    <item name="decode_failed" type="id"/>
-    <item name="decode_succeeded" type="id"/>
-    <item name="quit" type="id"/>
-    <item name="restart_preview" type="id"/>
-    <item name="return_scan_result" type="id"/>
+    <item name="id_circle_menu_item_image" type="id"/>
+    <item name="id_circle_menu_item_text" type="id"/>
+    <item name="id_circle_menu_item_center" type="id"/>
 
-    <item name="float_drag_layout_id" type="id" />
 </resources>

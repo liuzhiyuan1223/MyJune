@@ -50,7 +50,7 @@ public class MyElemeActivity extends AppCompatActivity {
     private final String[] mTitles = {
             "点餐", "评价", "商家"
     };
-    private ArrayList<Fragment> mFragments=new ArrayList<>();
+    private final ArrayList<Fragment> mFragments=new ArrayList<>();
     private MyFragmentAdapter mFragmentAdapter;
 
     @Override

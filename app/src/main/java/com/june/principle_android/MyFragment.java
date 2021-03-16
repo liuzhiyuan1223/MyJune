@@ -12,7 +12,7 @@ import com.june.R;
 
 public class MyFragment extends Fragment {
 
-    private static String ARG_PARAM = "param_key";
+    private static final String ARG_PARAM = "param_key";
     private String mParam;
     private Activity mActivity;
 

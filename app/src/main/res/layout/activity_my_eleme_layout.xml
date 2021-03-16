@@ -94,7 +94,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
                 <TextView
-                    android:id="@+id/textView11"
                     android:layout_width="40dp"
                     android:layout_height="0dp"
                     android:background="#ffe578"
@@ -294,7 +293,6 @@
             android:layout_height="@dimen/top_bar_height">
 
             <View
-                android:id="@+id/v_top_bar_bg"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:alpha="0"

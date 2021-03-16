@@ -34,9 +34,7 @@ class KotTestActivity : AppCompatActivity() {
         return duck
     }
 
-    open class Bird{
-    }
+    open class Bird
 
-    class Duck : Bird() {
-    }
+    class Duck : Bird()
 }

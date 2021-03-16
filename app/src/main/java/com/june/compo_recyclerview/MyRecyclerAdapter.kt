@@ -25,7 +25,7 @@ class MyRecyclerAdapter(context: Context) : RecyclerView.Adapter<MyViewHolder>()
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val dataModel = dataList[position]
-        holder.itemTv.setText(dataModel.name)
+        holder.itemTv.text = dataModel.name
         holder.itemTv.setOnClickListener {
             dataModel.clickCallBack?.onClick()
         }

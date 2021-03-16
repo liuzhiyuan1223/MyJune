@@ -35,7 +35,7 @@ public class ScrollMainActivity extends AppCompatActivity {
         data = new ArrayList<>();
 
         headerview_in = findViewById(R.id.listview_headerview2);
-        pullToRefreshListView = (PullToRefreshListView) findViewById(R.id.listview);
+        pullToRefreshListView = findViewById(R.id.listview);
 
         headerview1 = View.inflate(this, R.layout.listview_headerview1, null);
         headerview2 = View.inflate(this, R.layout.listview_headerview2, null);

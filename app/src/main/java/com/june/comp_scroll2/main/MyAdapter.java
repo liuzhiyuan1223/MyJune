@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class MyAdapter extends BaseAdapter {
     private List<String> data;
-    private Context context;
+    private final Context context;
     private Holder holder = null;
     public MyAdapter(List<String> data, Context context) {
         this.data = data;
@@ -44,7 +44,7 @@ public class MyAdapter extends BaseAdapter {
             holder = new Holder();
             convertView = LayoutInflater.from(context).inflate(
                     R.layout.listview_item, null);
-            holder.textView = (TextView) convertView.findViewById(R.id.listview_item_tv);
+            holder.textView = convertView.findViewById(R.id.listview_item_tv);
             convertView.setTag(holder);
         } else {
             holder = (Holder) convertView.getTag();

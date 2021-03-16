@@ -23,7 +23,7 @@ class MyFragmentFirst : Fragment() {
         val mRootView = LayoutInflater.from(context).inflate(R.layout.frag_first, container, false)
 //        val mTvStartSecondAct = mRootView.findViewById<TextView>(R.id.mTvStartSecondAct)
         val mTvTest2 = mRootView.findViewById<TextView>(R.id.mTvTest2)
-        mTvTest2.setText("注意这里")
+        mTvTest2.text = "注意这里"
 //        //点击btn跳转
 //        mTvStartSecondAct.setOnClickListener {
 //            startActivityForResult(Intent(context, MyFragAvtivitySecond::class.java), REQUEST_CODE)
@@ -35,7 +35,7 @@ class MyFragmentFirst : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mTvTest2.setText("注意这里")
+        mTvTest2.text = "注意这里"
     }
 
 

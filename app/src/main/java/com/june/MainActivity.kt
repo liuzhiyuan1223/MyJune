@@ -1,37 +1,45 @@
 package com.june
 
+//import com.june.comp_qr_code.activity.CaptureActivity
 import android.app.Activity
+import android.app.Application
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.tools.float_tool.FloatTools
+import com.example.tools.float_tool.fun_1.IStartWebListener
 import com.june.comp_counttimer_card.CancelCardTimerActivity
 import com.june.comp_download.DownLoadActivity
+import com.june.comp_edittext.TestEditTextActivity
 import com.june.comp_floatview.FloatViewActivity
+import com.june.comp_floatview.ViewTestActivity
+import com.june.comp_floatview.simple_case.SimpleFloatViewActivity
+import com.june.comp_floatview.test_decor_float.FloatMainActivity
+import com.june.comp_fragment.MyFragAvtivityFirst
 import com.june.comp_navigation.NavigActivity
+import com.june.comp_pack_name.PrintPackNameActivity
+import com.june.comp_scroll.MyElemeActivity
+import com.june.comp_scroll2.main.ScrollMainActivity
+import com.june.comp_text.TextTestActivity
+import com.june.comp_ui.UITestActivity
 import com.june.compo_recyclerview.DataModel
 import com.june.compo_recyclerview.InterfaceClickCallback
 import com.june.compo_recyclerview.MyRecyclerAdapter
 import com.june.frame_lifecycle.LifeCycleActivity
 import com.june.frame_okhttp.NetUtilActivity
+import com.june.fun_app_server.ServerManagerActivity
 import com.june.lang_java.JavaLangActivity
-import com.june.other_utils.LogCharlesRangIp
-import com.june.permission.CarmeraPermissonActivity
-import com.june.process_thread.ThreadTestCl
-import com.june.understand_fragment.MyFragActivity
-import kotlinx.android.synthetic.main.activity_main.*
-import com.june.comp_edittext.TestEditTextActivity
-import com.june.comp_fragment.MyFragAvtivityFirst
-import com.june.comp_pack_name.PrintPackNameActivity
-//import com.june.comp_qr_code.activity.CaptureActivity
-import com.june.comp_scroll.MyElemeActivity
-import com.june.comp_scroll2.main.ScrollMainActivity
-import com.june.comp_text.TextTestActivity
-import com.june.xml_parser.XMLParserActivity
-import com.june.comp_ui.UITestActivity
 import com.june.lang_kotlin.KotTestActivity
+import com.june.permission.CarmeraPermissonActivity
+import com.june.test_my_sweet_june_lib.TestSweetJuneLibActivity
+import com.june.understand_fragment.MyFragActivity
+import com.june.use_surfaceview.TestSurfaceViewActivity
+import com.june.use_surfaceview.dynamic_view.SurfaceViewDynDrawDemoActivity
+import com.june.xml_parser.XMLParserActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,16 +50,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         initRecycleViewContainer()
-
-        //查看一下主线程的优先级
-//        ThreadTestCl.printMainThreadPriority();
-    }
-
-    override fun onResume() {
-        super.onResume()
-//        LogCharlesRangIp.logCharlesIp(this) //打印所有的ip地址
     }
 
     fun initRecycleViewContainer() {
@@ -90,11 +89,18 @@ class MainActivity : AppCompatActivity() {
         addItemToList("17-btnToCancelCardTimerActivity", CancelCardTimerActivity::class.java)
         addItemToList("18-btnToPrintPackNameActivity", PrintPackNameActivity::class.java)
         addItemToList("19-btnToDownLoadActivity", DownLoadActivity::class.java)
+        addItemToList("20-btnToTestSurfaceViewActivity", TestSurfaceViewActivity::class.java)
+        addItemToList("21-btnToSurfaceViewDynDrawDemoActivity", SurfaceViewDynDrawDemoActivity::class.java)
+        addItemToList("22-btnToServerManagerActivity", ServerManagerActivity::class.java)
+        addItemToList("23-btnToViewTestActivity", ViewTestActivity::class.java)
+        addItemToList("24-btnToSimpleFloatViewActivity", SimpleFloatViewActivity::class.java)
+        addItemToList("25-btnToTestSweetJuneLibActivity", TestSweetJuneLibActivity::class.java)
+        addItemToList("26-btnToFloatMainActivity", FloatMainActivity::class.java)
 
         return dataList
     }
 
-    private fun addItemToList(@NonNull nameOfDes : String,@NonNull cls : Class<out Activity>){ //注意这个泛型的使用<out XX>
+    private fun addItemToList(@NonNull nameOfDes : String, @NonNull cls : Class<out Activity>){ //注意这个泛型的使用<out XX>
         val newDataModel = DataModel()
         newDataModel.let {
             it.name = nameOfDes

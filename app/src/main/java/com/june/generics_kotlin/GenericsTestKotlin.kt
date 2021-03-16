@@ -2,7 +2,7 @@ package com.june.generics_kotlin
 
 class Generics<T> {
 
-    val i: Int = 3;
+    val i: Int = 3
 
     private val t: T? = null
 
@@ -39,19 +39,17 @@ class Generics<T> {
 //        }
     }
 
-    open class Fruit {
-    }
+    open class Fruit
 
-    class Orange : Fruit() {
-    }
+    class Orange : Fruit()
 
 
-    public interface Collection<out E> : Iterable<E> {
-        public val size: Int
-        public fun isEmpty(): Boolean
-        public operator fun contains(element: @UnsafeVariance E): Boolean
+    interface Collection<out E> : Iterable<E> {
+        val size: Int
+        fun isEmpty(): Boolean
+        operator fun contains(element: @UnsafeVariance E): Boolean
         override fun iterator(): Iterator<E>
-        public fun containsAll(elements: Collection<@UnsafeVariance E>): Boolean
+        fun containsAll(elements: Collection<@UnsafeVariance E>): Boolean
 
         fun demo(oranges: Collection<Orange>) {
             val fruits: Collection<Fruit> = oranges

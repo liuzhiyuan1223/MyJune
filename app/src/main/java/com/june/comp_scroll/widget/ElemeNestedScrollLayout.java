@@ -55,11 +55,11 @@ public class ElemeNestedScrollLayout extends FrameLayout implements NestedScroll
     //ShopBar部分
     private View mShopBar;
 
-    private NestedScrollingParentHelper mParentHelper;
+    private final NestedScrollingParentHelper mParentHelper;
     private ProgressUpdateListener mProgressUpdateListener;
 
-    private ArgbEvaluator iconArgbEvaluator;//返回icon、拼团icon颜色渐变的Evaluator
-    private ArgbEvaluator topBarArgbEvaluator;//topbar颜色渐变的Evaluator
+    private final ArgbEvaluator iconArgbEvaluator;//返回icon、拼团icon颜色渐变的Evaluator
+    private final ArgbEvaluator topBarArgbEvaluator;//topbar颜色渐变的Evaluator
     private ValueAnimator restoreOrExpandAnimator;//收起或展开折叠内容时执行的动画
     private ValueAnimator reboundedAnim;//回弹动画
 

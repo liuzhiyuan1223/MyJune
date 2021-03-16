@@ -48,11 +48,11 @@ public class ElemeFoodNestedScrollLayout extends FrameLayout implements NestedSc
     //mask部分
     private View mVMask;
 
-    private NestedScrollingParentHelper mParentHelper;
+    private final NestedScrollingParentHelper mParentHelper;
     private ProgressUpdateListener mProgressUpdateListener;
 
     private ValueAnimator restoreOrExpandOrCloseAnimator;//收起或展开折叠内容时执行的动画
-    private ValueAnimator reboundedAnim;//回弹动画
+    private final ValueAnimator reboundedAnim;//回弹动画
 
     private float shopBarHeight;//shopBar部分高度
     private float ivExpandHegiht;//ivExpand部分高度

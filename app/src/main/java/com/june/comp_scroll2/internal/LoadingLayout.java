@@ -47,7 +47,7 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
 
 	static final Interpolator ANIMATION_INTERPOLATOR = new LinearInterpolator();
 
-	private FrameLayout mInnerLayout;
+	private final FrameLayout mInnerLayout;
 
 	protected final ImageView mHeaderImage;
 	protected final ProgressBar mHeaderProgress;
@@ -79,11 +79,11 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
 				break;
 		}
 
-		mInnerLayout = (FrameLayout) findViewById(R.id.fl_inner);
-		mHeaderText = (TextView) mInnerLayout.findViewById(R.id.pull_to_refresh_text);
-		mHeaderProgress = (ProgressBar) mInnerLayout.findViewById(R.id.pull_to_refresh_progress);
-		mSubHeaderText = (TextView) mInnerLayout.findViewById(R.id.pull_to_refresh_sub_text);
-		mHeaderImage = (ImageView) mInnerLayout.findViewById(R.id.pull_to_refresh_image);
+		mInnerLayout = findViewById(R.id.fl_inner);
+		mHeaderText = mInnerLayout.findViewById(R.id.pull_to_refresh_text);
+		mHeaderProgress = mInnerLayout.findViewById(R.id.pull_to_refresh_progress);
+		mSubHeaderText = mInnerLayout.findViewById(R.id.pull_to_refresh_sub_text);
+		mHeaderImage = mInnerLayout.findViewById(R.id.pull_to_refresh_image);
 
 		LayoutParams lp = (LayoutParams) mInnerLayout.getLayoutParams();
 
@@ -181,13 +181,13 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
 	}
 
 	public final void setHeight(int height) {
-		ViewGroup.LayoutParams lp = (ViewGroup.LayoutParams) getLayoutParams();
+		ViewGroup.LayoutParams lp = getLayoutParams();
 		lp.height = height;
 		requestLayout();
 	}
 
 	public final void setWidth(int width) {
-		ViewGroup.LayoutParams lp = (ViewGroup.LayoutParams) getLayoutParams();
+		ViewGroup.LayoutParams lp = getLayoutParams();
 		lp.width = width;
 		requestLayout();
 	}

@@ -11,7 +11,7 @@ class TextTestActivity : AppCompatActivity() {
         setContentView(R.layout.activity_text_test)
 
         //设置text1
-        mTxtFirst.setText(baseContext.resources.getString(R.string.format_txt_1, 666, 888))
-        mTxtSecond.setText(baseContext.resources.getString(R.string.format_txt_2, "210112天气好"))
+        mTxtFirst.text = baseContext.resources.getString(R.string.format_txt_1, 666, 888)
+        mTxtSecond.text = baseContext.resources.getString(R.string.format_txt_2, "210112天气好")
     }
 }

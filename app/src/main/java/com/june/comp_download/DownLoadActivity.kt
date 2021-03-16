@@ -46,7 +46,7 @@ class DownLoadActivity : AppCompatActivity(), View.OnClickListener {
 
         //SD卡具有读写权限、指定附件存储路径为SD卡上指定的文件夹
 //        dirName = Environment.getExternalStorageDirectory().toString() + "/Signature/"
-        dirName = this.getApplicationContext().getExternalFilesDir("")?.getAbsolutePath() ?: ""
+        dirName = this.applicationContext.getExternalFilesDir("")?.absolutePath ?: ""
 
         val f = File(dirName)
         if (!f.exists()) {      //判断文件夹是否存在

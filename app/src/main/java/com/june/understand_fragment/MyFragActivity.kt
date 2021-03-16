@@ -12,8 +12,4 @@ class MyFragActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-
-    }
 }

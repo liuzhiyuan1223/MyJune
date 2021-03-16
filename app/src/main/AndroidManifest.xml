@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.june.MyApplication"
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,7 +18,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="Instantiatable">
-        <activity android:name=".comp_download.DownLoadActivity"></activity>
+        <activity android:name=".comp_floatview.test_decor_float.FloatSecondActivity"></activity>
+        <activity android:name=".comp_floatview.test_decor_float.FloatMainActivity" />
+        <activity android:name=".comp_floatview.test_decor_float.FloatActivity" />
+        <activity android:name=".test_my_sweet_june_lib.TestSweetJuneLibActivity" />
+        <activity android:name=".comp_floatview.simple_case.SimpleFloatViewActivity" />
+        <activity android:name=".comp_floatview.ViewTestActivity" />
+        <activity android:name=".fun_app_server.ServerManagerActivity" />
+        <activity android:name=".use_surfaceview.dynamic_view.SurfaceViewDynDrawDemoActivity" />
+        <activity android:name=".use_surfaceview.TestSurfaceViewActivity" />
+        <activity android:name=".comp_download.DownLoadActivity" />
         <activity android:name=".comp_pack_name.PrintPackNameActivity" />
         <activity android:name=".comp_counttimer_card.CancelCardTimerActivity" />
         <activity android:name=".comp_text.TextTestActivity" />
@@ -36,7 +45,10 @@
         <activity android:name=".lang_java.JavaLangActivity" />
         <activity android:name=".frame_lifecycle.LifeCycleActivity" />
         <activity android:name=".comp_scroll.MyElemeActivity" />
-        <activity android:name=".comp_scroll2.main.ScrollMainActivity" /> <!-- <activity -->
+        <activity android:name=".comp_floatview.view.FloatActivity" />
+        <activity
+            android:name=".comp_scroll2.main.ScrollMainActivity"
+            android:launchMode="singleTask" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -15,6 +15,6 @@ class MyObserver : Observer<DataModelLife> {
 
     override fun onChanged(t: DataModelLife) {
         val textView = view as TextView
-        textView.setText(t.name)
+        textView.text = t.name
     }
 }

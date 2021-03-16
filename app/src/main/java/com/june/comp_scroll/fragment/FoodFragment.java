@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class FoodFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private FoodAdater mAdater;
-    private ArrayList<Integer> mDatas = new ArrayList<>();
+    private final ArrayList<Integer> mDatas = new ArrayList<>();
     private View mFooterView;
 
     @Override

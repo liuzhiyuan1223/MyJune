@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.june.comp_floatview.function_view.CircleView
+        android:layout_width="@dimen/_100_dp"
+        android:layout_height="@dimen/_100_dp"/>
+
+    <TextView
+        android:padding="@dimen/_10_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_333333"
+        android:text="功能1"/>
+
+    <TextView
+        android:padding="@dimen/_10_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_333333"
+        android:text="功能2"/>
+
+</LinearLayout>
